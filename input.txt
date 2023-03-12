@@ -1,0 +1,3 @@
+S - a | B | C
+B - bb | C
+C - cc

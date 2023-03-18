@@ -1,18 +1,18 @@
-class Stack:
+class Pilha:
     def __init__(self):
-        self.stack = []
+        self.pilha = []
 
-    def stackUp(self, item):
+    def empilhar(self, item):
         self.stack.append(item)
 
-    def unstack(self):
+    def desempilhar(self):
         if len(self.stack) > 0:
             self.stack.pop()
     
-    def showStack(self):
+    def exibePilha(self):
         print(self.stack)
     
-    def emptyStack(self):
+    def pilhaVazia(self):
         if len(self.stack) < 1:
             return True
         else:

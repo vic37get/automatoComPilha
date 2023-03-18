@@ -21,8 +21,8 @@ def makeDictionary(cleanData):
             return False
     return dictionary
 
-def mainInputReady(filename):
-    cleanInput = inputHandling(readInput(filename))
+def mainInputReady():
+    cleanInput = inputHandling(readInput('input.txt'))
     inputDictionary = makeDictionary(cleanInput)
     if inputDictionary:
         return inputDictionary

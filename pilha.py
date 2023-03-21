@@ -2,18 +2,22 @@ class Pilha:
     def __init__(self):
         self.pilha = []
 
-    def empilhar(self, item):
-        self.stack.append(item)
+    def empilha(self, item):
+        for unidade in range(len(item)):
+            self.pilha.append(unidade)
 
-    def desempilhar(self):
-        if len(self.stack) > 0:
-            self.stack.pop()
+    def desempilha(self):
+        if len(self.pilha) > 0:
+            self.pilha.pop()
     
     def exibePilha(self):
-        print(self.stack)
+        print(self.pilha)
     
     def pilhaVazia(self):
-        if len(self.stack) < 1:
+        if len(self.pilha) < 1:
             return True
         else:
             return False
+        
+    def getTopoPilha(self):
+        return self.pilha[-1]

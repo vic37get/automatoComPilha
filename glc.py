@@ -39,6 +39,7 @@ class GLC:
         stringTerminais = ''
         for itens in self.dados.keys():
             for item in self.dados[itens]:
-                if item.islower():
-                    stringTerminais+=item
+                for letra in item:
+                    if letra.islower():
+                        stringTerminais+=letra
         return self.unico(stringTerminais)

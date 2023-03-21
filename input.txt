@@ -1,3 +1,3 @@
-S - a | B | CC
-B - bb | C
-C - cc
+S - AB
+A - aAb | #
+B - cBd | #

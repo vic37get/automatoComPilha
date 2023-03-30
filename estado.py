@@ -9,3 +9,7 @@ class Estado:
     def exibeEstado(self):
         for i in self.transicoes:
             i.exibeTransicao()
+    
+    def getEstados(self):
+        for transicao in self.transicoes:
+            return transicao.getTransicao()

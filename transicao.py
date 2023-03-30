@@ -6,12 +6,12 @@ class Transicao:
         self.simboloDesempilhado = simboloDesempilhado
         self.estadoDestino = estadoDestino
     
-    def computaTransicao(self):
-        return ('({},{},{})'.format(self.simboloLido, self.simboloEmpilhado, self.simboloDesempilhado))
+    def getTransicao(self):
+        return [self.simboloLido, self.simboloDesempilhado,self.simboloEmpilhado]
         #print('Estado atual: {}\nSimbolo lido: {}\nSimbolo empilhado: {}\nSimbolo desempilhado: {}\nEstado destino: {}\n'.format(self.estadoAtual,
         #self.simboloLido, self.simboloEmpilhado, self.simboloDesempilhado, self.estadoDestino))
     
     def exibeTransicao(self):
-        print('({},{},{})'.format(self.simboloLido, self.simboloEmpilhado, self.simboloDesempilhado))
+        print('({},{},{})'.format(self.simboloLido, self.simboloDesempilhado, self.simboloEmpilhado))
         #print('Estado atual: {}\nSimbolo lido: {}\nSimbolo empilhado: {}\nSimbolo desempilhado: {}\nEstado destino: {}\n'.format(self.estadoAtual,
         #self.simboloLido, self.simboloEmpilhado, self.simboloDesempilhado, self.estadoDestino))

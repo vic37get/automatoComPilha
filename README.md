@@ -2,7 +2,7 @@
 
 ## ℹ️ Sobre
 
-Implementação em **python** da **conversão de uma GLC** (Gramática Livre de Contexto) não recursiva a esquerda **em AP** (Automato Pilha) e **reconhecimento de palavras**. Desenvolvido para a disciplina de Teoria da Computação de 2022.2 de ministrada pelo Carlos André (Ciência da Computação, UFPI).
+Implementação em **python** da **conversão de uma GLC** (Gramática Livre de Contexto) não recursiva a esquerda **em AP** (Automato Pilha) e **reconhecimento de palavras**. Desenvolvido para a disciplina de Teoria da Computação de 2022.2, ministrada pelo Carlos André (Ciência da Computação, UFPI).
 
 ## ⌨️ Entrada
 

@@ -1,0 +1,14 @@
+Estado (q0)
+Transições: 
+(#,#,S)
+
+Estado (q1)
+Transições: 
+(a,a,#)
+(b,b,#)
+(#,S,aSb)
+(#,S,#)
+(?,?,#)
+
+Estado (qf)
+Estado Final!

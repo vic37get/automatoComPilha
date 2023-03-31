@@ -12,8 +12,8 @@ class AP:
         #Estados
         self.Q0 = Estado('Q0')
         self.Q1 = Estado('Q1')
-        self.Q2 = Estado('Q2')
-        self.transicoesReconhecidas = []
+        self.QF = Estado('QF')
+        self.transicoesReconhecidas = ''
 
     def criaTransicoes(self):
         #Transição inicial
@@ -26,13 +26,7 @@ class AP:
             for producao in self.glc.dados[variavel]:
                 self.Q1.adicionaTransicao(Transicao(self.Q1.nome, '#', variavel, producao, self.Q1.nome)) 
         #Transição final
-        self.Q1.adicionaTransicao(Transicao(self.Q1.nome, '?', '?', '#', self.Q2.nome))
-        #Exibe estados:
-        #self.Q0.exibeEstado()
-        #self.Q1.exibeEstado()
-
-    def computaTransicaoPercorrida(self, palavra, transicao):
-        self.transicoesReconhecidas.append('({}, {} ,{})'.format(transicao.estadoAtual, palavra, self.pilha.pilha))
+        self.Q1.adicionaTransicao(Transicao(self.Q1.nome, '?', '?', '#', self.QF.nome))
     
     def primeiroCaractere(self, palavraAtual):
         if len(palavraAtual) > 0:
@@ -66,13 +60,14 @@ class AP:
 
     #Exibe na tela a lista dos possíveis estados.
     def exibePossiveisEstados(self, possiveisEstados):
-        print('Proximos possíveis estados:')
+        self.transicoesReconhecidas += '\nProximo(s) estado(s):\n'
         for estado in possiveisEstados:
-            print('[{}, {}, {}]'.format(estado[0], estado[1], estado[2].getPilha()))
+            self.transicoesReconhecidas +='({}, {}, {})\n'.format(estado[0], estado[1], estado[2].getPilha())
     
     def exibeConfiguracaoAtual(self, estadoAtual, palavra, pilha, profundidade):
-        print('\nConfiguração atual:')
-        print('Estado atual: {}\nPalavra atual: {}\nPilha atual: {}\nProfundidade: {}\n'.format(estadoAtual, palavra, list(reversed(pilha.getPilha())), profundidade))
+        self.transicoesReconhecidas += '\n-------------------\n'
+        self.transicoesReconhecidas += '\nConfiguração atual:'
+        self.transicoesReconhecidas += '\nEstado atual: {}\nPalavra atual: {}\nPilha atual: {}\nProfundidade: {}\n'.format(estadoAtual, palavra, list(reversed(pilha.getPilha())), profundidade)
     
     #Execução do reconhecimento da palavra no AP
     def reconhecimento(self, palavra):
@@ -97,7 +92,7 @@ class AP:
             profundidade = configuracaoAtual[3]
             
             if len(palavraAtual) == 0 and pilhaAtual.pilhaVazia():
-                print('ACEITA A PALAVRA!')
+                self.transicoesReconhecidas+='\nRESULTADO: Palavra Aceita!!'
                 return True
             
             if profundidade > (20*len(palavra)):
@@ -110,9 +105,5 @@ class AP:
                 for transicaoPossivel in possiveisTransicoes:
                     possiveisEstados.append(transicaoPossivel)
             self.exibePossiveisEstados(possiveisEstados)
-        print('REJEITA A PALAVRA!')
+        self.transicoesReconhecidas+='\nRESULTADO: Palavra Rejeitada!!'
         return False
-        
-ap = AP()
-ap.criaTransicoes()
-ap.reconhecimento('abbbbbb')

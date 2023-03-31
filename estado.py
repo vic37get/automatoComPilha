@@ -7,8 +7,11 @@ class Estado:
         self.transicoes.append(transicao)
     
     def exibeEstado(self):
+        transicoes = ''
         for i in self.transicoes:
-            i.exibeTransicao()
+            transicoes += i.exibeTransicao()+'\n'
+        return transicoes
+            
     
     def getEstados(self):
         for transicao in self.transicoes:

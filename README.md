@@ -2,11 +2,11 @@
 
 ## ℹ️ Sobre
 
-Implementação em python da conversão de uma GLC (Gramática Livre de Contexto) não recursiva a esquerda em AP (Automato Pilha) e reconhecimento de palavras para a disciplina de Teoria da Computação.
+Implementação em **python** da **conversão de uma GLC** (Gramática Livre de Contexto) não recursiva a esquerda **em AP** (Automato Pilha) e **reconhecimento de palavras** para a disciplina de Teoria da Computação de 2022.2 de ministrada pelo Carlos André (Ciência da Computação, UFPI).
 
 ## ⌨️ Entrada
 
-A entrada do programa consiste em dois arquivos: `input.txt` e `palavra.txt`.
+A entrada do programa consiste em **dois arquivos: `input.txt` e `palavra.txt`**.
 
 1. O arquivo **`input.txt`** deve conter uma GLC (Gramática Livre de Contexto) **sem recursão a esquerda**, veja um exemplo:
 
@@ -26,21 +26,47 @@ A entrada do programa consiste em dois arquivos: `input.txt` e `palavra.txt`.
 
 ## 🖥️ Saída
 
-A saída do programa deve aparecer **no terminal**, e deve mostrar o **processo de reconhecimento da palavra no AP (Automato Pilha), retornando ao final se a palavra foi rejeitada ou aceita**.
+A saída do programa consiste em **dois arquivos**:
 
-**Exemplos:**
+1. **`reconhecimento.txt`**: contém o processo de reconhecimento da palavra (`palavra.txt`) no AP (Automato Pilha), retornando ao final se a palavra foi rejeitada ou aceita.
 
-Saída para as entradas `ab` e `aab` usando o GLC que foi mostrado anteriormente:
+2. **`representacaoAP.txt`**: contém a representação do AP (Automato Pilha) para a gramática de entrada (`input.txt`).
 
-> Para `ab` (palavra aceita):
+**➡️ Exemplo de saída:**
+
+Vejamos um exemplo de saída para as entrada `ab` (palavra aceita) utilizando o GLC que foi mostrado anteriormente:
+
+> Arquivo `representacaoAP.txt`:
 
 ```
+Estado (q0)
+Transições:
+(#,#,S)
+
+Estado (q1)
+Transições:
+(a,a,#)
+(b,b,#)
+(#,S,aSb)
+(#,S,#)
+(?,?,#)
+
+Estado (qf)
+Estado Final!
+```
+
+> Arquivo `reconhecimento.txt`:
+
+```
+-------------------
+
 Configuração atual:
 Estado atual: Q0
 Palavra atual: ab
 Pilha atual: []
 Profundidade: 0
 
+-------------------
 
 Configuração atual:
 Estado atual: Q1
@@ -48,9 +74,11 @@ Palavra atual: ab
 Pilha atual: ['S']
 Profundidade: 1
 
-Proximos possíveis estados:
-[Q1, ab, ['b', 'S', 'a']]
-[Q1, ab, []]
+Proximo(s) estado(s):
+(Q1, ab, ['b', 'S', 'a'])
+(Q1, ab, [])
+
+-------------------
 
 Configuração atual:
 Estado atual: Q1
@@ -58,8 +86,10 @@ Palavra atual: ab
 Pilha atual: []
 Profundidade: 2
 
-Proximos possíveis estados:
-[Q1, ab, ['b', 'S', 'a']]
+Proximo(s) estado(s):
+(Q1, ab, ['b', 'S', 'a'])
+
+-------------------
 
 Configuração atual:
 Estado atual: Q1
@@ -67,8 +97,10 @@ Palavra atual: ab
 Pilha atual: ['a', 'S', 'b']
 Profundidade: 2
 
-Proximos possíveis estados:
-[Q1, b, ['b', 'S']]
+Proximo(s) estado(s):
+(Q1, b, ['b', 'S'])
+
+-------------------
 
 Configuração atual:
 Estado atual: Q1
@@ -76,9 +108,11 @@ Palavra atual: b
 Pilha atual: ['S', 'b']
 Profundidade: 3
 
-Proximos possíveis estados:
-[Q1, b, ['b', 'b', 'S', 'a']]
-[Q1, b, ['b']]
+Proximo(s) estado(s):
+(Q1, b, ['b', 'b', 'S', 'a'])
+(Q1, b, ['b'])
+
+-------------------
 
 Configuração atual:
 Estado atual: Q1
@@ -86,9 +120,11 @@ Palavra atual: b
 Pilha atual: ['b']
 Profundidade: 4
 
-Proximos possíveis estados:
-[Q1, b, ['b', 'b', 'S', 'a']]
-[Q1, , []]
+Proximo(s) estado(s):
+(Q1, b, ['b', 'b', 'S', 'a'])
+(Q1, , [])
+
+-------------------
 
 Configuração atual:
 Estado atual: Q1
@@ -96,91 +132,15 @@ Palavra atual:
 Pilha atual: []
 Profundidade: 5
 
-ACEITA A PALAVRA!
-```
+RESULTADO: Palavra Aceita!!
 
-> Para `aab` (palavra rejeitada):
-
-```
-Configuração atual:
-Estado atual: Q0
-Palavra atual: aab
-Pilha atual: []
-Profundidade: 0
-
-
-Configuração atual:
-Estado atual: Q1
-Palavra atual: aab
-Pilha atual: ['S']
-Profundidade: 1
-
-Proximos possíveis estados:
-[Q1, aab, ['b', 'S', 'a']]
-[Q1, aab, []]
-
-Configuração atual:
-Estado atual: Q1
-Palavra atual: aab
-Pilha atual: []
-Profundidade: 2
-
-Proximos possíveis estados:
-[Q1, aab, ['b', 'S', 'a']]
-
-Configuração atual:
-Estado atual: Q1
-Palavra atual: aab
-Pilha atual: ['a', 'S', 'b']
-Profundidade: 2
-
-Proximos possíveis estados:
-[Q1, ab, ['b', 'S']]
-
-Configuração atual:
-Estado atual: Q1
-Palavra atual: ab
-Pilha atual: ['S', 'b']
-Profundidade: 3
-
-Proximos possíveis estados:
-[Q1, ab, ['b', 'b', 'S', 'a']]
-[Q1, ab, ['b']]
-
-Configuração atual:
-Estado atual: Q1
-Palavra atual: ab
-Pilha atual: ['b']
-Profundidade: 4
-
-Proximos possíveis estados:
-[Q1, ab, ['b', 'b', 'S', 'a']]
-
-Configuração atual:
-Estado atual: Q1
-Palavra atual: ab
-Pilha atual: ['a', 'S', 'b', 'b']
-Profundidade: 4
-
-Proximos possíveis estados:
-[Q1, b, ['b', 'b', 'S']]
-
-Configuração atual:
-Estado atual: Q1
-Palavra atual: b
-Pilha atual: ['S', 'b', 'b']
-Pilha atual: ['a', 'S', 'b', 'b', 'b']
-Profundidade: 6
-
-Proximos possíveis estados:
-REJEITA A PALAVRA!
 ```
 
 ## ▶️ Como executar
 
 1. Baixe o projeto;
-2. Verifique os arquivos de entrada: `input.txt` (GLC) e `palavra.txt` (palavra a ser reconhecida);
-3. Execute o arquivo `ap.py` e veja a saída no terminal.
+2. Antes de executar, certifique-se de que você já inseriu a GLC desejada no arquivo `input.txt` e a palavra _w_ a ser reconhecida no arquivo `palavra.txt`;
+3. Execute o arquivo `main.py` e veja a saída nos arquivos `reconhecimento.txt` e `representacaoAP.txt`.
 
 ## 📜 Alunos
 

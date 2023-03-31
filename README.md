@@ -69,6 +69,28 @@ Proximos possíveis estados:
 [Q1, b, ['b', 'S']]
 
 Configuração atual:
+Estado atual: Q1
+Palavra atual: b
+Pilha atual: ['S', 'b']
+Profundidade: 3
+
+Proximos possíveis estados:
+[Q1, b, ['b', 'b', 'S', 'a']]
+[Q1, b, ['b']]
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: b
+Pilha atual: ['b']
+Profundidade: 4
+
+Proximos possíveis estados:
+[Q1, b, ['b', 'b', 'S', 'a']]
+[Q1, , []]
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual:
 Pilha atual: []
 Profundidade: 5
 

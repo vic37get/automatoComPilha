@@ -1,0 +1,122 @@
+
+-------------------
+
+Configuração atual:
+Estado atual: Q0
+Palavra atual: aabb
+Pilha atual: []
+Profundidade: 0
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: aabb
+Pilha atual: ['S']
+Profundidade: 1
+
+Proximo(s) estado(s):
+(Q1, aabb, ['b', 'S', 'a'])
+(Q1, aabb, [])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: aabb
+Pilha atual: []
+Profundidade: 2
+
+Proximo(s) estado(s):
+(Q1, aabb, ['b', 'S', 'a'])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: aabb
+Pilha atual: ['a', 'S', 'b']
+Profundidade: 2
+
+Proximo(s) estado(s):
+(Q1, abb, ['b', 'S'])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: abb
+Pilha atual: ['S', 'b']
+Profundidade: 3
+
+Proximo(s) estado(s):
+(Q1, abb, ['b', 'b', 'S', 'a'])
+(Q1, abb, ['b'])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: abb
+Pilha atual: ['b']
+Profundidade: 4
+
+Proximo(s) estado(s):
+(Q1, abb, ['b', 'b', 'S', 'a'])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: abb
+Pilha atual: ['a', 'S', 'b', 'b']
+Profundidade: 4
+
+Proximo(s) estado(s):
+(Q1, bb, ['b', 'b', 'S'])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: bb
+Pilha atual: ['S', 'b', 'b']
+Profundidade: 5
+
+Proximo(s) estado(s):
+(Q1, bb, ['b', 'b', 'b', 'S', 'a'])
+(Q1, bb, ['b', 'b'])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: bb
+Pilha atual: ['b', 'b']
+Profundidade: 6
+
+Proximo(s) estado(s):
+(Q1, bb, ['b', 'b', 'b', 'S', 'a'])
+(Q1, b, ['b'])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: b
+Pilha atual: ['b']
+Profundidade: 7
+
+Proximo(s) estado(s):
+(Q1, bb, ['b', 'b', 'b', 'S', 'a'])
+(Q1, , [])
+
+-------------------
+
+Configuração atual:
+Estado atual: Q1
+Palavra atual: 
+Pilha atual: []
+Profundidade: 8
+
+RESULTADO: Palavra Aceita!!

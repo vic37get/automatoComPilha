@@ -144,5 +144,5 @@ RESULTADO: Palavra Aceita!!
 
 ## 📜 Alunos
 
-| [<img src="https://avatars.githubusercontent.com/u/51518489?v=4" width=115><br><sub>Camila Fernanda Alves</sub>](https://github.com/vic37get) | [<img src="https://avatars.githubusercontent.com/u/57508736?v=4" width=115><br><sub>Jhoisnáyra Vitória</sub>](https://github.com/jhoisz) |
+| [<img src="https://avatars.githubusercontent.com/u/51518489?v=4" width=115><br><sub> Victor Ribeiro</sub>](https://github.com/vic37get) | [<img src="https://avatars.githubusercontent.com/u/57508736?v=4" width=115><br><sub>Jhoisnáyra Vitória</sub>](https://github.com/jhoisz) |
 | :-------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------: |

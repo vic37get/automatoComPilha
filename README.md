@@ -1,4 +1,4 @@
-<h1 align="center"> 💻✅❓ Automato Pilha: Conversão de GLC em AP e reconhecimento de palavras </h1>
+<h1 align="center"> 💻✅❓ Automato com Pilha: Conversão de GLC em AP e reconhecimento de palavras </h1>
 
 ## ℹ️ Sobre
 
@@ -15,6 +15,8 @@ A entrada do programa consiste em dois arquivos: `input.txt` e `palavra.txt`.
    ```
 
    > A gramática acima é correspondente a linguagem _L = {**a<sup>n</sup>b<sup>n</sup>**, n>=0 }_.
+
+   > Note que a gramática deve seguir esse padrão, símbolo inicial, hífen (que é o símbolo que representa a geração) e produções. Veja que as produções são separadas pelo caractere |.
 
 2. O arquivo **`palavra.txt`** deve conter a palavra que deve ser reconhecida no AP, vejamos um exemplo de palavra **aceita** e palavra **rejeitada** para a GLC mostrada acima:
 

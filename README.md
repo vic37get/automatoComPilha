@@ -18,7 +18,7 @@ A entrada do programa consiste em **dois arquivos: `input.txt` e `palavra.txt`**
 
    > Note que a gramática deve seguir esse padrão, símbolo inicial, hífen (que é o símbolo que representa a geração) e produções. Veja que as produções são separadas pelo caractere |.
 
-2. O arquivo **`palavra.txt`** deve conter a palavra que deve ser reconhecida no AP, vejamos um exemplo de palavra **aceita** e palavra **rejeitada** para a GLC mostrada acima:
+2. O arquivo **`palavra.txt`** deve conter a palavra a ser reconhecida no AP. Vejamos um exemplo de palavra **aceita** e palavra **rejeitada** para a GLC mostrada acima:
 
    | Aceita | Rejeitada |
    | ------ | --------- |

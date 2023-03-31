@@ -1,3 +1,7 @@
+def readInputOneLine(filename):
+    data = open(filename, 'r')
+    data = data.readline()
+    return data
 
 def readInput(filename):
     with open(filename, 'r') as file:

@@ -3,6 +3,7 @@ from glc import GLC
 from estado import Estado
 from transicao import Transicao
 from copy import deepcopy
+from readInput import readInputOneLine
 
 class AP:
     def __init__(self):
@@ -113,6 +114,10 @@ class AP:
         print('REJEITA A PALAVRA!')
         return False
         
+
+
+palavra = readInputOneLine('palavra.txt')
+
 ap = AP()
 ap.criaTransicoes()
-ap.reconhecimento('abbbbbb')
+ap.reconhecimento(palavra)

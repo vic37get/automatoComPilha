@@ -4,8 +4,8 @@ Transições:
 
 Estado (q1)
 Transições: 
-(a,a,#)
 (b,b,#)
+(a,a,#)
 (#,S,aSb)
 (#,S,#)
 (?,?,#)

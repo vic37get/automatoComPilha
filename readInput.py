@@ -43,7 +43,7 @@ def exibeAP(Q0, Q1, QF):
     return dadosAp
 
 def mainInputReady():
-    cleanInput = inputHandling(readInput('input.txt'))
+    cleanInput = inputHandling(readInput('entradas/input.txt'))
     inputDictionary = makeDictionary(cleanInput)
     if inputDictionary:
         return inputDictionary
